@@ -1,19 +1,36 @@
-
-
 def calculator():
-    num1 = float(input("Enter first number: "))
-    operator = input("Enter operator (+, -, * or /): ")
-    num2 = float(input("Enter second number: "))
-    if operator == "+":
-        print(num1 + num2)
-    elif operator == "-":
-        print(num1 - num2)
-    elif operator == "*":
-        print(num1 * num2)
-    elif operator == "/":
-        print(num1 / num2)
-    else:
-        print("You entered a invalid number or operator. Please try again.")
-        return calculator()
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+        except ValueError:
+            print("You entered invalid numbers. Please try again.")
+            continue
+        break
 
+   
+    while True:
+        try:
+            num2 = float(input("Enter second number: "))
+        except ValueError:
+            print("You entered invalid numbers. Please try again.")
+            continue
+        break
+
+    while True:
+        operator = input("Enter operator (+, -, * or /): ")
+        if operator == "+":
+            print(num1 + num2)
+            break
+        elif operator == "-":
+            print(num1 - num2)
+            break
+        elif operator == "*":
+            print(num1 * num2)
+            break
+        elif operator == "/":
+            print(num1 / num2)
+            break
+        else:
+            return False
+ 
 calculator()
